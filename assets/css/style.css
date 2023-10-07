@@ -34,3 +34,12 @@ header {
     margin-top: 50px;
     color: white;
 }
+
+.title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 200;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: white;
+}
