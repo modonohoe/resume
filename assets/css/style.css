@@ -34,6 +34,14 @@
     background-color: rgb(118, 179, 157);
 }
 
+.bg-color-conferences {
+    background-color: #f4f4f4;
+}
+
+.bg-color-groups {
+    background-color: #ffffff;
+}
+
 .ui-menu-color-cv {
     background-color: #fdb44b;
 }
