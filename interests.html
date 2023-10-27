@@ -260,38 +260,12 @@
   <script>
     var APIKey = "AIzaSyDu0nXPK6hbI5pXYHfMjUyebatojfBDx9c";
   </script>
-
-  <!-- Define initMap() function-->
-  <script>
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 3,
-        center: {
-          lat: 46.619261,
-          lng: -33.134766,
-        },
-      });
-      var labels = "ABCDEFGHIJKLMNOPQRSTUVWYZ";
-      var locations = [
-        { lat: 53.297902, lng: -6.179645 },
-        { lat: 53.332203, lng: -6.255906 },
-      ];
-      var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-          position: location,
-          label: labels[i % labels.length],
-        });
-      });
-      var markerClusterer = MarkerClusterer(map, markers, {
-        imagePath:
-          "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-      });
-    }
-  </script>
+  pt>
   <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
   <script
     async
     defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu0nXPK6hbI5pXYHfMjUyebatojfBDx9c&callback=initMap"
   ></script>
+  <script src="assets/js/maps.js"></script>
 </html>
