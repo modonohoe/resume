@@ -31,11 +31,19 @@
 }
 
 .ui-menu-color-contact {
-    background-color: #76b39d;
+    background-color: rgb(118, 179, 157);
 }
 
 .ui-menu-color-cv {
     background-color: #fdb44b;
+}
+
+.ui-menu-color-github {
+    background-color: #1c4a6c;
+}
+
+.ui-menu-color-interests {
+    background-color: #ff5349;
 }
 
 /* ------------------General styling */
@@ -90,7 +98,7 @@ header {
 }
 
 .logo {
-    background: url("../images/megan.jpg");
+    background: url("../images/hey.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -167,8 +175,7 @@ header {
 
 /* ------------------hover.css */
 
-
-.hvr-bounce-to-right:before {
+.hvr-bounce-to-right::before {
     background: rgba(0, 0, 0, 0.2);
     height: 120px;
 }
@@ -180,21 +187,22 @@ footer {
     color: #fafafa;
     min-height: 120px;
     margin: 0;
+    padding-top: 2px;
 }
 
-.cv-pdf i {
+footer .cv-pdf i {
     font-size: 18px;
     color: #fafafa;
     text-align: center;
     padding-left: 5px;
+}
+
+footer .cv-pdf i:hover {
+    color: #fdb44b;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
-}
-
-.cv-pdf i:hover {
-    color: #fdb44b;
 }
 
 .social-links {
@@ -225,90 +233,20 @@ footer {
     background: #962071;
 }
 
+#bitmoji {
+    max-height: 400px;
+    max-width: 400px;
+}
+
 #footer-details {
-    padding: 20px;
+    margin: 20px;
 }
 
-/* ------------------three reasons */
+/* --------------------three reasons*/
 
 .three-reasons-icon {
     font-size: 26px;
     color: #702283;
-}
-
-/* --------------------Personal Info */
-
-.personal-info-item {
-    margin-bottom: 20px;
-    display: block;
-    clear: both;
-}
-
-.personal-info-item .key,
-.personal-info-item .value {
-    padding-right: 8px;
-    display: inline-block;
-}
-
-.personal-info-item .key p,
-.personal-info-item .value p {
-    margin: 0;
-}
-
-.personal-info-item .key {
-    width: 30%;
-    margin-right: 21px;
-    padding-top: 2px;
-    vertical-align: top;
-}
-
-.personal-info-item .key p {
-    font-weight: 700;
-}
-
-.personal-info-item .value {
-    position: relative;
-    width: 60%;
-}
-
-.three-reasons-icon {
-    font-size: 26px;
-    color: #702283;
-}
-
-/* --------------------Personal Info */
-
-.personal-info-item {
-    margin-bottom: 20px;
-    display: block;
-    clear: both;
-}
-
-.personal-info-item .key,
-.personal-info-item .value {
-    padding-right: 8px;
-    display: inline-block;
-}
-
-.personal-info-item .key p,
-.personal-info-item .value p {
-    margin: 0;
-}
-
-.personal-info-item .key {
-    width: 30%;
-    margin-right: 21px;
-    padding-top: 2px;
-    vertical-align: top;
-}
-
-.personal-info-item .key p {
-    font-weight: 700;
-}
-
-.personal-info-item .value {
-    position: relative;
-    width: 60%;
 }
 
 .three-reasons-heading {
@@ -335,6 +273,7 @@ footer {
 }
 
 .personal-info-item .key {
+    display: inline-block;
     width: 30%;
     margin-right: 21px;
     padding-top: 2px;
@@ -346,6 +285,7 @@ footer {
 }
 
 .personal-info-item .value {
+    display: inline-block;
     position: relative;
     width: 60%;
 }
@@ -372,11 +312,6 @@ footer {
 }
 
 /* --------------------Work History */
-
-.history-heading {
-    color: #fafafa;
-    margin-bottom: 50px;
-}
 
 .timeline-item {
     padding: 4em 2em 0em 2em;
@@ -415,6 +350,11 @@ footer {
     background: #fafafa;
 }
 
+.history-heading {
+    color: #fafafa;
+    margin-bottom: 50px;
+}
+
 .history-items {
     margin-bottom: 30px;
 }
@@ -441,9 +381,21 @@ button[type="submit"] {
     background-color: #76b39d;
 }
 
+/*--------------------------------------------Map*/
+
+div#map {
+    min-height: 360px;
+}
+
 /* ----------------------------------------Media Queries */
 
 @media(min-width: 992px) {
+    .section-column {
+        padding: 0 30px 30px;
+        float: none;
+        display: table-cell;
+    }
+
     .center-form {
         padding-top: 30px;
         min-height: 240px;
