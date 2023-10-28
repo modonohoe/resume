@@ -1,3 +1,5 @@
+const markerCluster = new markerClusterer.MarkerClusterer({ markers, map });
+
 function initMap() {
     // Request needed libraries.
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
@@ -17,6 +19,11 @@ function initMap() {
 
     // Create an array of alphabetical characters used to label the markers.
     const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    const locations = [
+        { lat: 53.297902, lng: -6.179645 },
+        { lat: 53.332203, lng: -6.255906 },
+    ];
 
     // Add some markers to the map.
     const markers = locations.map(function (location, i) {
@@ -42,10 +49,5 @@ function initMap() {
     // Add a marker clusterer to manage the markers.
     new MarkerClusterer({ markers, map });
 }
-
-const locations = [
-    { lat: 53.297902, lng: -6.179645 },
-    { lat: 53.332203, lng: -6.255906 },
-];
 
 initMap();
