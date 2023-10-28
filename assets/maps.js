@@ -1,5 +1,3 @@
-const markerCluster = new markerClusterer.MarkerClusterer({ markers, map });
-
 function initMap() {
     // Request needed libraries.
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
@@ -49,5 +47,3 @@ function initMap() {
     // Add a marker clusterer to manage the markers.
     new MarkerClusterer({ markers, map });
 }
-
-initMap();
