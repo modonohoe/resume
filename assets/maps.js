@@ -1,25 +1,27 @@
-function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 3,
-        center: {
-            lat: 46.619261,
-            lng: -33.134766
-        }
+// Initialize and add the map
+let map;
+
+async function initMap() {
+    // The location of Uluru
+    const position = { lat: -25.344, lng: 131.031 };
+    // Request needed libraries.
+    //@ts-ignore
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    // The map, centered at Uluru
+    map = new Map(document.getElementById("map"), {
+        zoom: 4,
+        center: position,
+        mapId: "DEMO_MAP_ID",
     });
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    var locations = [
-        { lat: 53.297902, lng: -6.179645 },
-        { lat: 53.332203, lng: -6.255906 },
-    ];
-
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-        });
+    // The marker, positioned at Uluru
+    const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Uluru",
     });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 }
+
+initMap();
