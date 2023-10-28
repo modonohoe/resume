@@ -9,21 +9,24 @@ function initMap() {
         center: { lat: -28.024, lng: 140.887 },
         mapId: "DEMO_MAP_ID",
     });
+
     const infoWindow = new google.maps.InfoWindow({
         content: "",
         disableAutoPan: true,
     });
+
     // Create an array of alphabetical characters used to label the markers.
     const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
     // Add some markers to the map.
-    const markers = locations.map((position, i) => {
+    const markers = locations.map(function (location, i) {
         const label = labels[i % labels.length];
         const pinGlyph = new google.maps.marker.PinElement({
             glyph: label,
             glyphColor: "white",
         });
         const marker = new google.maps.marker.AdvancedMarkerElement({
-            position,
+            position: location,
             content: pinGlyph.element,
         });
 
