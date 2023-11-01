@@ -24,7 +24,6 @@
     <script type="text/javascript">
     (function(){
         emailjs.init("b4QX9vJcRwlE5Q2aQ");
-        emailjs.send("service_1oc31ra","template_xc5ekhs");
     })();
     </script>
   </head>
@@ -110,15 +109,15 @@
                 name="name"
                 id="fullname"
                 class="form-control"
-                placeholder="Name"
+                placeholder="Your name..."
                 required
               />
               <input
                 type="email"
-                name="email"
+                name="emailaddress"
                 id="emailaddress"
                 class="form-control"
-                placeholder="Email"
+                placeholder="Your email address..."
                 required
               />
               <textarea
@@ -126,7 +125,7 @@
                 name="projectsummary"
                 id="projectsummary"
                 class="form-control"
-                placeholder="Project description"
+                placeholder="Describe your project..."
                 required
               ></textarea>
               <div class="form-row text-center">
@@ -187,6 +186,8 @@
         src="https://kit.fontawesome.com/f916b749a1.js"
         crossorigin="anonymous"
     ></script>
+
     <script src="assets/js/sendEmail.js"></script>
-  </body>
+  
+</body>
 </html>
