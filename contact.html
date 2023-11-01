@@ -17,6 +17,16 @@
       type="text/css"
     />
     <title>Megan</title>
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("b4QX9vJcRwlE5Q2aQ");
+        emailjs.send("service_1oc31ra","template_xc5ekhs");
+    })();
+    </script>
   </head>
   <body>
     <header>
@@ -94,7 +104,7 @@
           <h5 class="uppercase text-center">Let's work together!</h5>
 
           <div class="center-form">
-            <form>
+            <form onsubmit="return sendMail(this);">
               <input
                 type="text"
                 name="name"
@@ -172,11 +182,11 @@
         </div>
       </div>
     </footer>
+      <!-- Font Awesome script-->
+    <script
+        src="https://kit.fontawesome.com/f916b749a1.js"
+        crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/sendEmail.js"></script>
   </body>
-
-  <!-- Font Awesome script-->
-  <script
-    src="https://kit.fontawesome.com/f916b749a1.js"
-    crossorigin="anonymous"
-  ></script>
 </html>
